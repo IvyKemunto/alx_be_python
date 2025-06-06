@@ -1,27 +1,10 @@
-# Simple Calculator with Match Case
-# This script performs basic arithmetic operations using match case statements
+# multiplication_table.py
+# This script generates a multiplication table for a given number from 1 to 10
 
-# Prompt for user input
-num1 = float(input("Enter the first number: "))
-num2 = float(input("Enter the second number: "))
-operation = input("Choose the operation (+, -, *, /): ")
+# Prompt user for a number
+number = int(input("Enter a number to see its multiplication table: "))
 
-# Perform calculation using match case
-match operation:
-    case "+":
-        result = num1 + num2
-        print(f"The result is {result}.")
-    case "-":
-        result = num1 - num2
-        print(f"The result is {result}.")
-    case "*":
-        result = num1 * num2
-        print(f"The result is {result}.")
-    case "/":
-        if num2 == 0:
-            print("Cannot divide by zero.")
-        else:
-            result = num1 / num2
-            print(f"The result is {result}.")
-    case _:
-        print("Invalid operation selected.")
+# Generate and print the multiplication table using a for loop
+for i in range(1, 11):
+    result = number * i
+    print(f"{number} * {i} = {result}")
